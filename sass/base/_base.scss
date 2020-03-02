@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1em = 10px;
+    font-family: 'Roboto Slab';
+    color: $black;
+}
+
+/*
+font-family: 'Roboto Slab';
+font-family: 'Dosis';
+*/
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

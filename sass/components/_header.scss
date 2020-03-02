@@ -1,0 +1,26 @@
+.header {
+
+    grid-column: info-start / info-end;
+    grid-row: logo-start / logo-end;
+
+    display: flex;
+    align-items: center;
+
+    &__img {
+        margin-right: .8rem;
+        height: 7rem;
+    }
+
+    &__title {
+        font-size: 3.9rem;
+        font-family: 'Dosis';
+    }
+    
+
+    // background-color: green;
+
+    @media only screen and (max-width: $large) {
+        grid-column: auto;
+        justify-content: center;
+    }
+}

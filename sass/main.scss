@@ -1,6 +1,6 @@
+@import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
-@import 'abstracts/variables';
 
 @import 'base/base';
 @import 'base/animations';
@@ -8,11 +8,17 @@
 @import 'base/utilities';
 
 // Put components imports here
+@import 'components/header';
+@import 'components/info';
+@import 'components/smartphone';
+@import 'components/footer';
 
 // Put layouts imports here
+@import 'layouts/main-grid';
 
 // Put pages imports here
 
 // Put themes imports here
+@import 'themes/background';
 
 // Put vendors imports here

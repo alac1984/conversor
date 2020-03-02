@@ -1,0 +1,22 @@
+.info {
+    
+    grid-column: info-start / info-end;
+    grid-row: text-start / text-end;
+
+    // background-color: red;
+
+
+    &__title {
+        font-size: 2.4rem;
+        margin-bottom: 2.4rem;
+    }
+
+    &__text {
+        font-size: 1.9rem;
+    }
+
+    @media only screen and (max-width: $large) {
+        grid-column: auto;
+        text-align: center;
+    }
+}

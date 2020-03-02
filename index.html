@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:800|Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Conversor: a free online time and number converter</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="Conversor's logo" class="header__img">
+            </div>
+            <h1 class="header__title">Conversor</h1>
+        </div>
+        <main class="info">
+            <h2 class="info__title">Need to convert time or number? We're here for you.</h2>
+            <p class="info__text">Use the smartphone in front of you freely. It can convert time and numbers to some
+                different formats. At any point, buy us a coffee.</p>
+        </main>
+        <div class="smartphone">
+            <div class="smartphone__header">
+                <ul class="smartphone__links">
+                    <li class="smartphone__link smartphone__link--active">Time</li>
+                    <li class="smartphone__link">Number</li>
+                </ul>
+            </div>
+            <div class="smartphone__body">
+                <div class="smartphone__option smartphone__time smartphone__option--active">
+                    <h3 class="smartphone__title">Time Conversion</h3>
+                    <form action="" class="time-form">
+                        <label for="unix" class="time-form__label">Unix timestamp</label>
+                        <input type="text" placeholder="Insert Unix timestamp" class="time-form__input" id="unix">
+
+                        <label for="iso8601" class="time-form__label">ISO 8601 time</label>
+                        <input type="text" placeholder="Insert ISO 8601 value" class="time-form__input" id="iso8601">
+
+                        <label for="rfc2822" class="time-form__label">RFC 2822 time</label>
+                        <input type="text" placeholder="Insert RFC 2822 time" class="time-form__input" id="rfc2822">
+                    </form>
+                </div>
+                <div class="smartphone__option smartphone__number">
+                    <h3 class="smartphone__title">Number Conversion</h3>
+                    <form action="" class="number-form">
+                        <label for="decimal" class="number-form__label">Decimal</label>
+                        <input type="text" placeholder="Insert decimal number" class="number-form__input" id="decimal">
+
+                        <label for="hexadecimal" class="number-form__label">Hexadecimal</label>
+                        <input type="text" placeholder="Insert hex number" class="number-form__input" id="hexadecimal">
+
+                        <label for="binary" class="number-form__label">Binary</label>
+                        <input type="text" placeholder="Insert binary number" class="number-form__input" id="binary">
+                </div>
+            </div>
+            <div class="smartphone__footer">
+                <div class="smartphone__donate">
+                    <p>Wanna buy us a coffe? So <a href="#" class="donate__link">donate</a>!
+                    </p>
+                </div>
+                <div class="smartphone__ad">
+                    Insert add
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__credits">
+                <p class="footer__text">Logo icon made by <a href="https://www.flaticon.com/br/autores/surang" class="footer__link">Surang</a> from <a href="https://www.flaticon.com/" class="footer__link">Flaticon</a></p>
+                <div class="footer__ad">
+                    Insert add
+                </div>
+            </div>
+        </footer>
+        <div class="background-container"></div>
+
+    </div>
+
 </body>
+
 </html>

@@ -1,0 +1,12 @@
+body {
+    background-color: $red;
+}
+
+.background-container {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: $blue;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 70vh);
+}

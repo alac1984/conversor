@@ -1,0 +1,38 @@
+.container {
+    z-index: 2;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 
+        [top-start] 5rem [top-end 
+        logo-start] min-content [logo-end 
+        gap-start] 3rem [gap-end 
+        text-start] 3fr [text-end 
+        footer-start] 1fr [footer-end];
+    grid-template-columns: 
+        [left-start] 1fr [left-end 
+        info-start] 3fr [info-end 
+        gap-start] 8rem [gap-end 
+        smartphone-start] 36rem [smartphone-end 
+        right-start] 1fr [right-end];
+
+    grid-gap: $s-gap;
+
+    color: $white;
+
+    @media only screen and (max-width: $large) {
+
+    grid-template-rows: 
+        [top-start] 3rem [top-end 
+        logo-start] min-content [logo-end 
+        text-start] 3fr [text-end 
+        smartphone-start] 70rem [smartphone-end
+        footer-start] 1fr [footer-end];
+    grid-template-columns: 
+        1fr;
+
+    grid-gap: $m-gap;
+
+    }
+
+}

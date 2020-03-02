@@ -1,0 +1,12 @@
+.footer {
+
+    grid-column: info-start / info-end;
+    grid-row: footer-start / footer-end;
+
+    // background-color: blue;
+
+    @media only screen and (max-width: $large) {
+        grid-column: auto;
+        text-align: center;
+    }
+}
