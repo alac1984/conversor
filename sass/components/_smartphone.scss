@@ -7,15 +7,17 @@
     background-repeat: no-repeat;
     background-position: top center;
     // background-color: fuchsia;
+
+    font-size: 1.4rem;
     display: grid;
 
     grid-template-columns: 
-        [left-start] 3rem [left-end 
-        column-start] 30.5rem [column-end 
+        [left-start] 4rem [left-end 
+        column-start] 28.5rem [column-end 
         right-start] 2.6rem [right-end];
     grid-template-rows: 
         [top-start] 9.6rem [top-end 
-        header-start] 1fr [header-end 
+        header-start] 9rem [header-end 
         body-start] 2fr [body-end 
         footer-start] 1fr [footer-end
         bottom-start] 12.5rem [bottom-end];
@@ -27,6 +29,31 @@
     &__header {
         grid-column: column-start / column-end;
         grid-row: header-start / header-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    &__links {
+        display: flex;
+        align-items: flex-end;
+
+        p {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+    }
+    
+    &__item {
+        @include animatedlink($red);
+    }
+
+    &__title {
+        font-size: 2.1rem;
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
     &__body {
@@ -37,6 +64,15 @@
     &__footer {
         grid-column: column-start / column-end;
         grid-row: footer-start / footer-end;
+    }
+
+    &__donate {
+        text-align: center;
+        @include animatedlink($red);
+    }
+
+    &__ad {
+        text-align: center;
     }
 
 

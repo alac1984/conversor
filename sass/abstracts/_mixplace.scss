@@ -1,0 +1,42 @@
+@mixin animatedlink($color) {
+    a {
+        position: relative;
+    }
+
+    a:link,
+    a:visited {
+        top: 0;
+        color: $color;
+        transition: top .2s ease;
+    }
+
+    a:hover {
+        top: -0.4rem;
+    }
+
+    a:active {
+        top: -0.2rem;
+    }
+
+}
+
+// %smartlinks {
+//     a {
+//         position: relative;
+//     }
+
+//     a:link,
+//     a:visited {
+//         top: 0;
+//         color: $red;
+//         transition: top .2s ease;
+//     }
+
+//     a:hover {
+//         top: -0.4rem;
+//     }
+
+//     a:active {
+//         top: -0.2rem;
+//     }
+// }

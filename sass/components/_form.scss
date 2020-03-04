@@ -1,0 +1,17 @@
+.form {
+    display: grid;
+
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
+    grid-template-columns: 1fr;
+
+    &__label{
+    }
+
+    &__input {
+        margin-bottom: 1rem;
+        padding: .2rem .4rem;
+        height: 60%;
+        font-size: 1.4rem;
+
+    }
+}

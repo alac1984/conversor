@@ -19,51 +19,54 @@
             <h1 class="header__title">Conversor</h1>
         </div>
         <main class="info">
-            <h2 class="info__title">Need to convert time or number? We're here for you.</h2>
-            <p class="info__text">Use the smartphone in front of you freely. It can convert time and numbers to some
-                different formats. At any point, buy us a coffee.</p>
+            <div class="info__container">
+                <h2 class="info__title">Need to convert a time value or a number? We're here for you.</h2>
+                <p class="info__text">Use the smartphone in front of you freely. It can convert time values or numbers to some different formats. At any point, buy us a coffee.</p>
+            </div>
         </main>
         <div class="smartphone">
             <div class="smartphone__header">
+                    <div class="ad">INSERT AD</div>
                 <ul class="smartphone__links">
-                    <li class="smartphone__link smartphone__link--active">Time</li>
-                    <li class="smartphone__link">Number</li>
+                    <li class="smartphone__item smartphone__item--active"><a href="#" class="smartphone__link">Time</a></li>
+                    <p> | </p>
+                    <li class="smartphone__item"><a href="#" class="smartphone__link">Number</a></li>
                 </ul>
             </div>
             <div class="smartphone__body">
                 <div class="smartphone__option smartphone__time smartphone__option--active">
                     <h3 class="smartphone__title">Time Conversion</h3>
-                    <form action="" class="time-form">
-                        <label for="unix" class="time-form__label">Unix timestamp</label>
-                        <input type="text" placeholder="Insert Unix timestamp" class="time-form__input" id="unix">
+                    <form action="" class="form" id="time-form">
+                        <label for="unix" class="form__label">Unix timestamp</label>
+                        <input type="text" placeholder="Insert Unix timestamp" class="form__input" id="unix">
 
-                        <label for="iso8601" class="time-form__label">ISO 8601 time</label>
-                        <input type="text" placeholder="Insert ISO 8601 value" class="time-form__input" id="iso8601">
+                        <label for="iso8601" class="form__label">ISO 8601 time</label>
+                        <input type="text" placeholder="Insert ISO 8601 value" class="form__input" id="iso8601">
 
-                        <label for="rfc2822" class="time-form__label">RFC 2822 time</label>
-                        <input type="text" placeholder="Insert RFC 2822 time" class="time-form__input" id="rfc2822">
+                        <label for="rfc2822" class="form__label">RFC 2822 time</label>
+                        <input type="text" placeholder="Insert RFC 2822 time" class="form__input" id="rfc2822">
                     </form>
                 </div>
                 <div class="smartphone__option smartphone__number">
                     <h3 class="smartphone__title">Number Conversion</h3>
-                    <form action="" class="number-form">
-                        <label for="decimal" class="number-form__label">Decimal</label>
-                        <input type="text" placeholder="Insert decimal number" class="number-form__input" id="decimal">
+                    <form action="" class="form" id="number-form">
+                        <label for="decimal" class="form__label">Decimal</label>
+                        <input type="text" placeholder="Insert decimal number" class="form__input" id="decimal">
 
-                        <label for="hexadecimal" class="number-form__label">Hexadecimal</label>
-                        <input type="text" placeholder="Insert hex number" class="number-form__input" id="hexadecimal">
+                        <label for="hexadecimal" class="form__label">Hexadecimal</label>
+                        <input type="text" placeholder="Insert hex number" class="form__input" id="hexadecimal">
 
-                        <label for="binary" class="number-form__label">Binary</label>
-                        <input type="text" placeholder="Insert binary number" class="number-form__input" id="binary">
+                        <label for="binary" class="form__label">Binary</label>
+                        <input type="text" placeholder="Insert binary number" class="form__input" id="binary">
                 </div>
             </div>
             <div class="smartphone__footer">
                 <div class="smartphone__donate">
-                    <p>Wanna buy us a coffe? So <a href="#" class="donate__link">donate</a>!
+                    <p>Wanna buy us a coffee? So <a href="#" class="donate__link">donate</a>!
                     </p>
                 </div>
                 <div class="smartphone__ad">
-                    Insert add
+                    INSERT ADD
                 </div>
             </div>
         </div>

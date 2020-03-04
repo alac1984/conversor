@@ -1,6 +1,6 @@
 @import 'abstracts/variables';
 @import 'abstracts/functions';
-@import 'abstracts/mixins';
+@import 'abstracts/mixplace';
 
 @import 'base/base';
 @import 'base/animations';
@@ -12,6 +12,7 @@
 @import 'components/info';
 @import 'components/smartphone';
 @import 'components/footer';
+@import 'components/form';
 
 // Put layouts imports here
 @import 'layouts/main-grid';
