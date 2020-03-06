@@ -2,7 +2,7 @@
   "name": "conversor",
   "version": "1.0.0",
   "description": "A simple time and number converter",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server --browser=firefox",
