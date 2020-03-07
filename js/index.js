@@ -53,6 +53,10 @@ let UIController =(function() {
         inputNumberHexa: 'hexadecimal',
         inputNumberBinary: 'binary',
         smartphoneBody: 'smartphone__body',
+        timeLink: 'timeLink',
+        numberLink: 'numberLink',
+        timeOption: 'time-option',
+        numberOption: 'number-option',
     };
 
     // Check if a value is worth displaying in the input
@@ -91,7 +95,12 @@ let controller =(function(conversionCtrl, UICtrl) {
     // Setup event listeners
     let setupEventListeners = function() {
 
+        // Everytime an input value is altered, all of then are updated
         document.getElementById(DOM.smartphoneBody).addEventListener('input', recalcThemAll);
+        // When numberLink is clicked, show number form
+        document.getElementById(DOM.numberLink).addEventListener('click', showNumberForm);
+        // When timeLink is clicked, show time form
+        document.getElementById(DOM.timeLink).addEventListener('click', showTimeForm);
 
     }
 
@@ -166,6 +175,28 @@ let controller =(function(conversionCtrl, UICtrl) {
         // 5. Put the values into the right input
         UICtrl.insertIntoInput(inputsToAlter[0], alteredValue01);
         UICtrl.insertIntoInput(inputsToAlter[1], alteredValue02);
+    }
+
+    let showNumberForm = function(e) {
+        e.preventDefault();
+        // Change the link underlines
+        document.getElementById(DOM.numberLink).classList.add('smartphone__link--active');
+        document.getElementById(DOM.timeLink).classList.remove('smartphone__link--active');
+        // Show the proper form
+        document.getElementById(DOM.numberOption).classList.add('smartphone__option--active');
+        document.getElementById(DOM.numberOption).classList.remove('smartphone__option--deactive');
+        document.getElementById(DOM.timeOption).classList.add('smartphone__option--deactive');
+    }
+
+    let showTimeForm = function(e) {
+        e.preventDefault();
+        // Change the link underlines
+        document.getElementById(DOM.timeLink).classList.add('smartphone__link--active');
+        document.getElementById(DOM.numberLink).classList.remove('smartphone__link--active');
+        // Show the proper form
+        document.getElementById(DOM.timeOption).classList.add('smartphone__option--active');
+        document.getElementById(DOM.timeOption).classList.remove('smartphone__option--deactive');
+        document.getElementById(DOM.numberOption).classList.add('smartphone__option--deactive');
     }
 
     return {

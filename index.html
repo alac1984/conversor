@@ -29,14 +29,14 @@
             <div class="smartphone__header">
                 <div class="ad">INSERT AD</div>
                 <ul class="smartphone__links">
-                    <li class="smartphone__item smartphone__item--active"><a href="#" class="smartphone__link">Time</a>
+                    <li class="smartphone__item"><a href="#" class="smartphone__link smartphone__link--active" id="timeLink">Time</a>
                     </li>
                     <p> | </p>
-                    <li class="smartphone__item"><a href="#" class="smartphone__link">Number</a></li>
+                    <li class="smartphone__item"><a href="#" class="smartphone__link" id="numberLink">Number</a></li>
                 </ul>
             </div>
             <div class="smartphone__body" id="smartphone__body">
-                <div class="smartphone__option smartphone__time smartphone__option--active">
+                <div class="smartphone__option smartphone__option--active" id="time-option">
                     <h3 class="smartphone__title">Time Conversion</h3>
                     <form action="" class="form" id="time-form">
                         <label for="unix" class="form__label">Unix timestamp</label>
@@ -49,7 +49,7 @@
                         <input type="text" placeholder="Insert RFC 2822 time" class="form__input" id="rfc2822">
                     </form>
                 </div>
-                <div class="smartphone__option smartphone__number">
+                <div class="smartphone__option smartphone__option--deactive" id="number-option">
                     <h3 class="smartphone__title">Number Conversion</h3>
                     <form action="" class="form" id="number-form">
                         <label for="decimal" class="form__label">Decimal</label>

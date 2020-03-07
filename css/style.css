@@ -15,7 +15,8 @@ font-family: 'Roboto Slab';
 font-family: 'Dosis';
 */
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
 
 ul {
   list-style: none; }
@@ -61,7 +62,9 @@ ul {
   display: grid;
   grid-template-columns: [left-start] 4rem [left-end column-start] 28.5rem [column-end right-start] 2.6rem [right-end];
   grid-template-rows: [top-start] 9.6rem [top-end header-start] 9rem [header-end body-start] 2fr [body-end footer-start] 1fr [footer-end bottom-start] 12.5rem [bottom-end]; }
-  .smartphone__number {
+  .smartphone__option--active {
+    display: block; }
+  .smartphone__option--deactive {
     display: none; }
   .smartphone__header {
     grid-column: column-start / column-end;
@@ -87,6 +90,11 @@ ul {
     top: -0.4rem; }
   .smartphone__item a:active {
     top: -0.2rem; }
+  .smartphone__link {
+    text-decoration: none;
+    transition: all .2s ease; }
+    .smartphone__link--active {
+      text-decoration: underline; }
   .smartphone__title {
     font-size: 2.1rem;
     text-align: center;

@@ -22,8 +22,14 @@
         footer-start] 1fr [footer-end
         bottom-start] 12.5rem [bottom-end];
 
-    &__number {
-        display: none;
+    &__option {
+        &--active {
+            display: block;
+        }
+
+        &--deactive {
+            display: none;
+        }
     }
 
     &__header {
@@ -48,6 +54,16 @@
     
     &__item {
         @include animatedlink($red);
+    }
+
+    &__link {
+        text-decoration: none;
+        transition: all .2s ease;
+
+        &--active {
+            text-decoration: underline;
+        }
+
     }
 
     &__title {
