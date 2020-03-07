@@ -55,7 +55,7 @@ ul {
 .smartphone {
   grid-column: smartphone-start / smartphone-end;
   grid-row: logo-start / footer-end;
-  background-image: url("../../img/smartphone.png");
+  background-image: url("../img/smartphone.png");
   background-repeat: no-repeat;
   background-position: top center;
   font-size: 1.4rem;

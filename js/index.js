@@ -38,6 +38,30 @@ let conversionController =(function() {
         ISOToRFC: function(value) {
             console.log('ISO TO RFC!!')
         },
+
+        decimalToHexa: function(value) {
+            console.log('Decimal to Hexa!');
+        },
+
+        decimalToBinary: function(value) {
+            console.log('Decimal to Binary');
+        },
+
+        hexaToDecimal: function(value) {
+            console.log('Hexa to Decimal!');
+        },
+
+        hexaToBinary: function(value) {
+            console.log('Hexa to Binary');
+        },
+
+        binaryToHexa: function(value) {
+            console.log('Binary to Hexa!');
+        },
+
+        binaryToDecimal: function() {
+            console.log('Binary to Decimal!');
+        },
     }
 
 })();
@@ -153,6 +177,15 @@ let controller =(function(conversionCtrl, UICtrl) {
                 break;
             case DOM.inputTimeRfc:
                 return alteringId === DOM.inputTimeIso ? conversionCtrl.RFCToISO(value) : conversionCtrl.RFCToUnix(value);
+                break;
+            case DOM.inputNumberDecimal:
+                return alteringId === DOM.inputNumberHexa ? conversionCtrl.decimalToHexa(value) : conversionCtrl.decimalToBinary(value);
+                break;
+            case DOM.inputNumberHexa:
+                return alteringId === DOM.inputNumberBinary ? conversionCtrl.hexaToBinary(value) : conversionCtrl.hexaToDecimal(value);
+                break;
+            case DOM.inputNumberBinary:
+                return alteringId === DOM.inputNumberHexa ? conversionCtrl.binaryToHexa(value) : conversionCtrl.binaryToDecimal(value);
                 break;
         }
     }
