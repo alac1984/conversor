@@ -26,41 +26,56 @@ let conversionController =(function() {
 
         // Converts RFC 2822 to Unix Timestamp
         RFCToUnix: function(value) {
-            console.log('RFC TO UNIX!!')
+            let date;
+            date = new Date(value).getTime() / 1000;
+            return date;
         },
 
         // Converts RFC 2822 to ISO 8601 
         RFCToISO: function(value) {
-            console.log('RFC TO ISO!!')
+            let date;
+            date = new Date(value).toISOString();
+            return date;
         },
 
         // Converts ISO 8601 to RFC 2822
         ISOToRFC: function(value) {
-            console.log('ISO TO RFC!!')
+            let date;
+            date = new Date(value).toString();
+            return date;
         },
 
         decimalToHexa: function(value) {
-            console.log('Decimal to Hexa!');
+            let number;
+            number = Number.parseInt(value).toString(16);
+            return number;
         },
 
         decimalToBinary: function(value) {
-            console.log('Decimal to Binary');
+            return (value >>> 0).toString(2);
         },
 
         hexaToDecimal: function(value) {
-            console.log('Hexa to Decimal!');
+            let number;
+            number = Number.parseInt(value, 16);
+            return number;
         },
 
         hexaToBinary: function(value) {
-            console.log('Hexa to Binary');
+            let number;
+            number = Number.parseInt(value, 16);
+            return (number >>> 0).toString(2);
         },
 
         binaryToHexa: function(value) {
-            console.log('Binary to Hexa!');
+            let number;
+            number = Number.parseInt(value, 2);
+            console.log('Binary to Hexa: ' + number);
+            return Number.parseInt(number).toString(16);
         },
 
-        binaryToDecimal: function() {
-            console.log('Binary to Decimal!');
+        binaryToDecimal: function(value) {
+            return Number.parseInt(value, 2);
         },
     }
 
@@ -85,7 +100,12 @@ let UIController =(function() {
 
     // Check if a value is worth displaying in the input
     let isGoodValue = function(value) {
-        return Number.isNaN(value) || value === 0 || value == undefined ? false : true;
+
+        return !Number.isNaN(value) && 
+               value !== 0 && 
+               value != undefined && 
+               value !== '' && 
+               value != 'NaN';
     }
 
     // Change input color to red as the input value is not producing any reasonable output
@@ -103,7 +123,7 @@ let UIController =(function() {
             if(isGoodValue(alteredValue)) {
                 document.getElementById(inputToAlter).value = alteredValue;
             }
-        }
+        },
 
     }
 
