@@ -9,4 +9,14 @@ body {
     height: 100vh;
     background-color: $blue;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 70vh);
+
+    @media only screen and (min-width: $almost-huge) {
+        clip-path: polygon(0 0, 100% 0, 100% 68%, 0 50vh);
+    }
+
+    @media only screen and (min-width: $huge) {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 60vh);
+    }
+
+
 }

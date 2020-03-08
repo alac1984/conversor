@@ -10,6 +10,19 @@ html {
     font-size: 62.5%; // 1em = 10px;
     font-family: 'Roboto Slab';
     color: $black;
+
+    @media only screen and (min-width: $almost-huge) {
+        font-size: 85%;
+    }
+
+    @media only screen and (min-width: $huge) {
+        font-size: 100%;
+    }
+
+    @media only screen and (max-width: $small) {
+        font-size: 50%;
+    }
+
 }
 
 /*

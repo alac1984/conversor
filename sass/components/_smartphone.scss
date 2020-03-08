@@ -6,8 +6,7 @@
     background-image: url('../img/smartphone.png');
     background-repeat: no-repeat;
     background-position: top center;
-    // background-color: fuchsia;
-
+    background-size: 36rem;
     font-size: 1.4rem;
     display: grid;
 
@@ -18,8 +17,8 @@
     grid-template-rows: 
         [top-start] 9.6rem [top-end 
         header-start] 9rem [header-end 
-        body-start] 2fr [body-end 
-        footer-start] 1fr [footer-end
+        body-start] 26rem [body-end 
+        footer-start] 13rem [footer-end
         bottom-start] 12.5rem [bottom-end];
 
     &__option {
@@ -92,14 +91,12 @@
     }
 
 
-    // @media only screen and (max-width: $largest) {
-    //     grid-column: column-start 7 / column-end 11;
-    // }
-
     @media only screen and (max-width: $large) {
         grid-column: auto;
         grid-row: smartphone-start / smartphone-end;
         justify-content: center;
 
     }
+
+
 }

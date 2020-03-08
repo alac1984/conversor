@@ -7,8 +7,8 @@
         [top-start] 5rem [top-end 
         logo-start] min-content [logo-end 
         gap-start] 3rem [gap-end 
-        text-start] 3fr [text-end 
-        footer-start] 1fr [footer-end];
+        text-start] 52vh [text-end 
+        footer-start] 2fr [footer-end];
     grid-template-columns: 
         [left-start] 1fr [left-end 
         info-start] 3fr [info-end 
@@ -19,6 +19,26 @@
     grid-gap: $s-gap;
 
     color: $white;
+
+    @media only screen and (min-width: $almost-huge) {
+        grid-template-rows: 
+            [top-start] 5rem [top-end 
+            logo-start] min-content [logo-end 
+            gap-start] 3rem [gap-end 
+            text-start] 40vh [text-end 
+            footer-start] 2fr [footer-end];
+    }
+
+    @media only screen and (min-width: $huge) {
+        grid-template-rows: 
+            [top-start] 5rem [top-end 
+            logo-start] min-content [logo-end 
+            gap-start] 3rem [gap-end 
+            text-start] 52vh [text-end 
+            footer-start] 2fr [footer-end];
+
+
+    }
 
     @media only screen and (max-width: $large) {
 

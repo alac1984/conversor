@@ -9,6 +9,15 @@ html {
   font-size: 62.5%;
   font-family: 'Roboto Slab';
   color: #090446; }
+  @media only screen and (min-width: 87.5em) {
+    html {
+      font-size: 85%; } }
+  @media only screen and (min-width: 100em) {
+    html {
+      font-size: 100%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
 
 /*
 font-family: 'Roboto Slab';
@@ -58,10 +67,11 @@ ul {
   background-image: url("../img/smartphone.png");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: 36rem;
   font-size: 1.4rem;
   display: grid;
   grid-template-columns: [left-start] 4rem [left-end column-start] 28.5rem [column-end right-start] 2.6rem [right-end];
-  grid-template-rows: [top-start] 9.6rem [top-end header-start] 9rem [header-end body-start] 2fr [body-end footer-start] 1fr [footer-end bottom-start] 12.5rem [bottom-end]; }
+  grid-template-rows: [top-start] 9.6rem [top-end header-start] 9rem [header-end body-start] 26rem [body-end footer-start] 13rem [footer-end bottom-start] 12.5rem [bottom-end]; }
   .smartphone__option--active {
     display: block; }
   .smartphone__option--deactive {
@@ -162,10 +172,16 @@ ul {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-rows: [top-start] 5rem [top-end logo-start] min-content [logo-end gap-start] 3rem [gap-end text-start] 3fr [text-end footer-start] 1fr [footer-end];
+  grid-template-rows: [top-start] 5rem [top-end logo-start] min-content [logo-end gap-start] 3rem [gap-end text-start] 52vh [text-end footer-start] 2fr [footer-end];
   grid-template-columns: [left-start] 1fr [left-end info-start] 3fr [info-end gap-start] 8rem [gap-end smartphone-start] 36rem [smartphone-end right-start] 1fr [right-end];
   grid-gap: 12px;
   color: #F4F1DE; }
+  @media only screen and (min-width: 87.5em) {
+    .container {
+      grid-template-rows: [top-start] 5rem [top-end logo-start] min-content [logo-end gap-start] 3rem [gap-end text-start] 40vh [text-end footer-start] 2fr [footer-end]; } }
+  @media only screen and (min-width: 100em) {
+    .container {
+      grid-template-rows: [top-start] 5rem [top-end logo-start] min-content [logo-end gap-start] 3rem [gap-end text-start] 52vh [text-end footer-start] 2fr [footer-end]; } }
   @media only screen and (max-width: 52.5em) {
     .container {
       grid-template-rows: [top-start] 3rem [top-end logo-start] min-content [logo-end text-start] 3fr [text-end smartphone-start] 70rem [smartphone-end footer-start] 1fr [footer-end];
@@ -182,3 +198,9 @@ body {
   height: 100vh;
   background-color: #0F7173;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 70vh); }
+  @media only screen and (min-width: 87.5em) {
+    .background-container {
+      clip-path: polygon(0 0, 100% 0, 100% 68%, 0 50vh); } }
+  @media only screen and (min-width: 100em) {
+    .background-container {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 60vh); } }
