@@ -21,11 +21,11 @@
         }
 
         &--2 {
-            top: 8.3rem;
+            top: 7.6rem;
         }
 
         &--3 {
-            top: 15rem;
+            top: 13.3rem;
 
         }
 
@@ -46,10 +46,11 @@
     }
 
     &__input {
-        margin-bottom: 1rem;
-        padding: .2rem .4rem;
-        height: 60%;
         font-size: 1.4rem;
+        padding-left: .5rem;
 
+        &--red {
+            background-color: $red;
+        }
     }
 }

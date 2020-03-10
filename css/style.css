@@ -174,9 +174,9 @@ ul {
     .form__btn--1 {
       top: 1.9rem; }
     .form__btn--2 {
-      top: 8.3rem; }
+      top: 7.6rem; }
     .form__btn--3 {
-      top: 15rem; }
+      top: 13.3rem; }
     .form__btn:hover {
       margin-top: -0.4rem; }
     .form__btn:active {
@@ -186,10 +186,10 @@ ul {
     height: 2.1rem;
     width: 2.1rem; }
   .form__input {
-    margin-bottom: 1rem;
-    padding: .2rem .4rem;
-    height: 60%;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    padding-left: .5rem; }
+    .form__input--red {
+      background-color: #F71735; }
 
 .container {
   z-index: 2;

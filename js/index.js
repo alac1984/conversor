@@ -84,6 +84,10 @@ let conversionController =(function() {
 // UI Controller
 
 let UIController =(function() {
+
+    // Register if we're dealing with a good value
+    let goodValue;
+
     const DOMStrings = {
         inputTimeUnix: 'unix',
         inputTimeIso: 'iso8601',
@@ -100,17 +104,14 @@ let UIController =(function() {
 
     // Check if a value is worth displaying in the input
     let isGoodValue = function(value) {
-
-        return !Number.isNaN(value) && 
+        goodValue = 
+               !Number.isNaN(value) && 
                value !== 0 && 
                value != undefined && 
                value !== '' && 
-               value != 'NaN';
-    }
-
-    // Change input color to red as the input value is not producing any reasonable output
-    let redInput = function(input) {
-
+               value != 'NaN' &&
+               value != 'Invalid Date';
+        return goodValue;
     }
 
     
@@ -123,6 +124,20 @@ let UIController =(function() {
             if(isGoodValue(alteredValue)) {
                 document.getElementById(inputToAlter).value = alteredValue;
             }
+        },
+
+        // Change input color to red as the input value is not producing any reasonable output
+        addRedInput: function(input) {
+            input.classList.add('form__input--red');
+        },
+
+        // Remove red input when the value is ok
+        removeRedInput: function(input) {
+            input.classList.remove('form__input--red');
+        },
+
+        getGoodValue: function() {
+            return goodValue;
         },
 
     }
@@ -211,12 +226,20 @@ let controller =(function(conversionCtrl, UICtrl) {
     }
 
     let recalcThemAll = function(e) {
-        // 1. Detect what input we're changing
         let alteredInputId, value, inputsToAlter, alteredValue01, alteredValue02;
+
+        // 1. Detect what input we're changing
         alteredInputId = e.target.id;
 
         // 2. Grabs input value
         value = e.target.value;
+
+        // 3. If the value is not good, change the color of this input and remove it when it is ok
+        if(UICtrl.getGoodValue()) {
+            UICtrl.removeRedInput(document.getElementById(alteredInputId));
+        } else {
+            UICtrl.addRedInput(document.getElementById(alteredInputId));
+        }
 
         // 3. Determine what inputs should be altered
         inputsToAlter = whatInputsToAlter(alteredInputId);
