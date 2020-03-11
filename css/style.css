@@ -130,6 +130,10 @@ ul {
       top: -0.2rem; }
   .smartphone__ad {
     text-align: center; }
+  .smartphone__p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    padding-right: .6rem; }
   @media only screen and (max-width: 52.5em) {
     .smartphone {
       grid-column: auto;
@@ -152,6 +156,8 @@ ul {
       top: -0.4rem; }
     .footer__text a:active {
       top: -0.2rem; }
+  .footer__active {
+    text-decoration: underline; }
   @media only screen and (max-width: 52.5em) {
     .footer {
       grid-column: auto;
@@ -195,6 +201,9 @@ ul {
     padding-left: .5rem; }
     .form__input--red {
       background-color: #F71735; }
+  .form__donation {
+    width: 52%;
+    margin: 0 auto; }
 
 .container {
   z-index: 2;

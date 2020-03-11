@@ -29,7 +29,8 @@
             <div class="smartphone__header">
                 <div class="ad">INSERT AD</div>
                 <ul class="smartphone__links">
-                    <li class="smartphone__item"><a href="#" class="smartphone__link smartphone__link--active" id="timeLink">Time</a>
+                    <li class="smartphone__item"><a href="#" class="smartphone__link smartphone__link--active"
+                            id="timeLink">Time</a>
                     </li>
                     <p> | </p>
                     <li class="smartphone__item"><a href="#" class="smartphone__link" id="numberLink">Number</a></li>
@@ -41,15 +42,22 @@
                     <form action="" class="form" id="time-form">
                         <label for="unix" class="form__label">Unix timestamp</label>
                         <input type="text" placeholder="Insert Unix timestamp" class="form__input" id="unix">
-                        <a id="clip-btn-unix" class="form__btn form__btn--1"><svg class="form__icon icon icon-clipboard"><use xlink:href="img/symbol-defs.svg#icon-clipboard"></use></svg></a>
+                        <a id="clip-btn-unix" class="form__btn form__btn--1"><svg
+                                class="form__icon icon icon-clipboard">
+                                <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
+                            </svg></a>
 
                         <label for="iso8601" class="form__label">ISO 8601 time</label>
                         <input type="text" placeholder="Insert ISO 8601 value" class="form__input" id="iso8601">
-                        <a id="clip-btn-iso" class="form__btn form__btn--2"><svg class="form__icon icon icon-clipboard"><use xlink:href="img/symbol-defs.svg#icon-clipboard"></use></svg></a>
+                        <a id="clip-btn-iso" class="form__btn form__btn--2"><svg class="form__icon icon icon-clipboard">
+                                <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
+                            </svg></a>
 
                         <label for="rfc2822" class="form__label">RFC 2822 time</label>
                         <input type="text" placeholder="Insert RFC 2822 time" class="form__input" id="rfc2822">
-                        <a id="clip-btn-rfc" class="form__btn form__btn--3"><svg class="form__icon icon icon-clipboard"><use xlink:href="img/symbol-defs.svg#icon-clipboard"></use></svg></a>
+                        <a id="clip-btn-rfc" class="form__btn form__btn--3"><svg class="form__icon icon icon-clipboard">
+                                <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
+                            </svg></a>
                     </form>
                 </div>
                 <div class="smartphone__option smartphone__option--deactive" id="number-option">
@@ -57,20 +65,40 @@
                     <form action="" class="form" id="number-form">
                         <label for="decimal" class="form__label">Decimal</label>
                         <input type="text" placeholder="Insert decimal number" class="form__input" id="decimal">
-                        <a id="clip-btn-decimal" class="form__btn form__btn--1"><svg class="form__icon icon icon-clipboard"><use xlink:href="img/symbol-defs.svg#icon-clipboard"></use></svg></a>
+                        <a id="clip-btn-decimal" class="form__btn form__btn--1"><svg
+                                class="form__icon icon icon-clipboard">
+                                <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
+                            </svg></a>
 
                         <label for="hexadecimal" class="form__label">Hexadecimal</label>
                         <input type="text" placeholder="Insert hex number" class="form__input" id="hexadecimal">
-                        <a id="clip-btn-hexa" class="form__btn form__btn--2"><svg class="form__icon icon icon-clipboard"><use xlink:href="img/symbol-defs.svg#icon-clipboard"></use></svg></a>
+                        <a id="clip-btn-hexa" class="form__btn form__btn--2"><svg
+                                class="form__icon icon icon-clipboard">
+                                <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
+                            </svg></a>
 
                         <label for="binary" class="form__label">Binary</label>
                         <input type="text" placeholder="Insert binary number" class="form__input" id="binary">
-                        <a id="clip-btn-binary" class="form__btn form__btn--3"><svg class="form__icon icon icon-clipboard"><use xlink:href="img/symbol-defs.svg#icon-clipboard"></use></svg></a>
+                        <a id="clip-btn-binary" class="form__btn form__btn--3"><svg
+                                class="form__icon icon icon-clipboard">
+                                <use xlink:href="img/symbol-defs.svg#icon-clipboard"></use>
+                            </svg></a>
+                    </form>
+                </div>
+                <div class="smartphone__option smartphone__option--deactive" id="form-donate">
+                   <h3 class="smartphone__title">Buy us a coffee!</h3>
+                   <p class="smartphone__p">Hi, my name is André! I create free apps and spread it over the web so people can enjoy or even profit with them. If any of my creations help you in any way, consider to help me with any value you can. At the very least, you'll buy me a coffee so I can produce a lot more websites like this one!</p>
+                    <form class="form__donation" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick" />
+                        <input type="hidden" name="hosted_button_id" value="PCKDQBSE9K72U" />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                        <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
                 </div>
             </div>
             <div class="smartphone__footer">
                 <div class="smartphone__donate">
-                    <p>Wanna buy us a coffee? So <a href="#" class="donate__link">donate</a>!
+                    <p>Wanna buy us a coffee? So <a href="#" class="donate__link" id="donate">donate</a>!
                     </p>
                 </div>
                 <div class="smartphone__ad">
@@ -91,7 +119,7 @@
         <div class="background-container"></div>
 
     </div>
-<script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -228,6 +228,8 @@ let UIController = (function () {
         btnDec: 'clip-btn-decimal',
         btnHexa: 'clip-btn-hexa',
         btnBinary: 'clip-btn-binary',
+        donateLink: 'donate',
+        donateForm: 'form-donate',
     };
 
 
@@ -320,6 +322,8 @@ let controller = (function (conversionCtrl, UICtrl) {
         document.getElementById(DOM.btnDec).addEventListener('click', UICtrl.copytoClipboard);
         document.getElementById(DOM.btnHexa).addEventListener('click', UICtrl.copytoClipboard);
         document.getElementById(DOM.btnBinary).addEventListener('click', UICtrl.copytoClipboard);
+        // When the user clicks in the donate link
+        document.getElementById(DOM.donateLink).addEventListener('click', showDonateForm);
 
     }
 
@@ -422,10 +426,12 @@ let controller = (function (conversionCtrl, UICtrl) {
         // Change the link underlines
         document.getElementById(DOM.numberLink).classList.add('smartphone__link--active');
         document.getElementById(DOM.timeLink).classList.remove('smartphone__link--active');
+        document.getElementById(DOM.donateLink).classList.remove('footer__active');
         // Show the proper form
         document.getElementById(DOM.numberOption).classList.add('smartphone__option--active');
         document.getElementById(DOM.numberOption).classList.remove('smartphone__option--deactive');
         document.getElementById(DOM.timeOption).classList.add('smartphone__option--deactive');
+        document.getElementById(DOM.donateForm).classList.add('smartphone__option--deactive');
     }
 
     let showTimeForm = function (e) {
@@ -433,10 +439,25 @@ let controller = (function (conversionCtrl, UICtrl) {
         // Change the link underlines
         document.getElementById(DOM.timeLink).classList.add('smartphone__link--active');
         document.getElementById(DOM.numberLink).classList.remove('smartphone__link--active');
+        document.getElementById(DOM.donateLink).classList.remove('footer__active');
         // Show the proper form
         document.getElementById(DOM.timeOption).classList.add('smartphone__option--active');
         document.getElementById(DOM.timeOption).classList.remove('smartphone__option--deactive');
         document.getElementById(DOM.numberOption).classList.add('smartphone__option--deactive');
+        document.getElementById(DOM.donateForm).classList.add('smartphone__option--deactive');
+    }
+
+    let showDonateForm = function(e) {
+        e.preventDefault();
+        // Change the link underlines
+        document.getElementById(DOM.donateLink).classList.add('footer__active');
+        document.getElementById(DOM.timeLink).classList.remove('smartphone__link--active');
+        document.getElementById(DOM.numberLink).classList.remove('smartphone__link--active');
+        // Show the proper form
+        document.getElementById(DOM.donateForm).classList.add('smartphone__option--active');
+        document.getElementById(DOM.donateForm).classList.remove('smartphone__option--deactive');
+        document.getElementById(DOM.numberOption).classList.add('smartphone__option--deactive');
+        document.getElementById(DOM.timeOption).classList.add('smartphone__option--deactive');
     }
 
     return {
