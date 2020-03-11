@@ -184,7 +184,12 @@ ul {
   .form__icon {
     fill: #F4F1DE;
     height: 2.1rem;
-    width: 2.1rem; }
+    width: 2.1rem;
+    z-index: -1;
+    pointer-events: none;
+    transition: all .5s ease; }
+    .form__icon--blue {
+      fill: #0F7173; }
   .form__input {
     font-size: 1.4rem;
     padding-left: .5rem; }

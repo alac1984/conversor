@@ -42,6 +42,13 @@
         fill: $white;
         height: 2.1rem;
         width: 2.1rem;
+        z-index: -1;
+        pointer-events: none;
+        transition: all .5s ease;
+
+        &--blue {
+            fill: $blue;
+        }
 
     }
 
